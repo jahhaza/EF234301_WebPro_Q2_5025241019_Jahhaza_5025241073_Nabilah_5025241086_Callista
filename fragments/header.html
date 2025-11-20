@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="header">
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    FreshAndFix
+                </div>
+                <nav>
+                    <ul>
+                        <li><a th:href="@{/}">Home</a></li>
+                        <li><a th:href="@{/#categories}">Categories</a></li>
+                        <li><a th:href="@{/#flash-sale}">Flash Sale</a></li>
+                        <li><a th:href="@{/about}">About Us</a></li>
+                        <li><a th:href="@{/#contact}">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-icons">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search products...">
+                        <div class="search-results"></div>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div id="user-icon-container">
+                        <i class="fas fa-user" id="user-icon"></i>
+                    </div>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <div class="user-dropdown-item" id="user-name-display"></div>
+                        <div class="user-dropdown-item" id="account-btn">
+                            <i class="fas fa-user-cog"></i> My Account
+                        </div>
+                        <div class="user-dropdown-item logout" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+</html>

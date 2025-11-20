@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FreshAndFix</title>
+    <meta name="description" content="Learn more about FreshAndFix — our mission, vision, and what we offer.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Header Fragment -->
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Welcome to FreshAndFix</h2>
+                    <p>FreshAndFix is a modern digital grocery platform designed to help families, households, and small businesses access high-quality groceries at stable, transparent prices.</p>
+                    <!-- More about content -->
+                </div>
+                <div class="about-video">
+                    <video autoplay muted loop>
+                        <source th:src="@{/images/VideoFRESHANDFIXOKE.mp4}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission" id="vision-mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Vision & Mission</h2>
+            </div>
+            <div class="vision-mission-content">
+                <div class="vision">
+                    <h3>Our Vision</h3>
+                    <p>To transform grocery shopping into a more efficient, accessible, and trustworthy digital experience for every household and small business.</p>
+                </div>
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <ul>
+                        <li>Provide stable and transparent pricing that benefits both regular and bulk buyers.</li>
+                        <li>Offer only high-quality, verified products sourced from trusted suppliers.</li>
+                        <!-- More mission items -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other sections: What We Offer, Why Choose, How to Order, etc. -->
+
+    <!-- Footer Fragment -->
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>
