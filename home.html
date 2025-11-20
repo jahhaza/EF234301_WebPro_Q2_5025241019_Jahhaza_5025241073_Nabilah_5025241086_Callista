@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshAndFix — Fresh Groceries, Fixed Prices, Fast Delivery</title>
+    <meta name="description" content="FreshAndFix brings everyday essentials closer to you — with fair pricing, verified suppliers, transparent wholesale discounts, and a seamless shopping experience.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Header Fragment -->
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video autoplay muted loop>
+            <source th:src="@{/images/FreshAndFix.mp4}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <div class="marquee-container">
+                <div class="marquee">FreshAndFix — Fresh Groceries, Fixed Prices, Fast Delivery</div>
+            </div>
+            <h1>Premium groceries. Wholesale prices. Delivered to your door.</h1>
+            <p>FreshAndFix brings everyday essentials closer to you — with fair pricing, verified suppliers, transparent wholesale discounts, and a seamless shopping experience inspired by the top online marketplaces.</p>
+            <div class="hero-cta">
+                <a href="#categories" class="btn btn-primary">Explore Categories</a>
+                <a th:href="@{/about}" class="btn btn-secondary">Learn How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brands Section -->
+    <section class="trusted-brands">
+        <div class="container">
+            <h2>Trusted Brands</h2>
+            <div class="brands-slider">
+                <div class="brands-track">
+                    <div class="brand-logo"><img th:src="@{/images/Bango.jpg}" alt="Bango"></div>
+                    <div class="brand-logo"><img th:src="@{/images/Indomie.jpg}" alt="Indomie"></div>
+                    <!-- Other brand logos -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale" id="flash-sale">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flash Sale</h2>
+                <p>Limited time offers on your favorite products</p>
+            </div>
+            <div class="flash-sale-timer">
+                <!-- Timer content -->
+            </div>
+            <div class="product-grid" id="flash-sale-products">
+                <!-- Products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Product Categories</h2>
+                <p>Browse our wide selection of high-quality groceries</p>
+            </div>
+            <div class="category-filter" id="category-filter">
+                <!-- Categories loaded via JavaScript -->
+            </div>
+            <div class="product-grid" id="category-products">
+                <!-- Products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Fragment -->
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>
